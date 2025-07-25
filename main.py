@@ -147,7 +147,7 @@ def index():
         ]
         db.session.bulk_save_objects(sample_products)
         db.session.commit()
-    return render_template('index.html')
+    return "App is running succesfully on port 5000."
 
 
 
