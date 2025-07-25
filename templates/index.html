@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛍️ Voice Shopping Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛍️ Voice Shopping Assistant</h1>
+      <p class="subtitle">Speak naturally and let AI manage your shopping list</p>
+    </header>
+
+    <div class="controls">
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+      <button id="startMic">
+        🎤 Start Listening
+      </button>
+    </div>
+
+    <div id="statusMessage" class="status">Press the mic and speak your command...</div>
+
+    <div class="section">
+      <h2>📝 Your Shopping List</h2>
+      <ul id="shoppingList" class="list"></ul>
+    </div>
+
+    <div class="section">
+      <h2>💡 Smart Suggestions</h2>
+      <ul id="suggestionsList" class="list"></ul>
+    </div>
+
+    <div class="section">
+      <h2>🔍 Product Search Results</h2>
+      <ul id="searchResults" class="list"></ul>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
